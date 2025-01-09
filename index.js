@@ -36,12 +36,12 @@ app.use(morgan("dev"));
 
   
 app.get("/", (req, res) => {
-   res.render("home",{title:"Home"});
+  return res.render("home",{title:"Home"});
 });
 
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About" });
+  return res.render("about", { title: "About" });
 });
 
 //redirect
