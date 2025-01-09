@@ -35,7 +35,7 @@ app.use(morgan("dev"));
 
   
 app.get("/", (req, res) => {
-  return res.render("home",{title:"Home"});
+  res.redirect('/blogs');
 });
 
 
