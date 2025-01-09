@@ -1,10 +1,10 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require('cors');
-const Blog = require('./model/blog')
+const cors = require("cors");
+const Blog = require("./model/blog")
 const morgan = require("morgan");
-
+const path = require("path")
 
 const app = express();
 
@@ -23,7 +23,7 @@ mongoose.connect(dbURI)
 
 //register view engine
 app.set("view engine", "ejs");
-app.set("views",path.resolve("./views))
+app.set('views',path.resolve("./views))
 
 
 //middleware & static files
