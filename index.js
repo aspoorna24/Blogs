@@ -36,7 +36,7 @@ app.use(morgan("dev"));
 
   
 app.get("/", (req, res) => {
-   res.redirect('/blogs')
+   res.send('Hi From Server')
 });
 
 
