@@ -1,6 +1,7 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require('cors');
 
 const morgan = require("morgan");
 const BlogRoutes = require('./routes/blogRoutes');
@@ -27,7 +28,7 @@ app.set("view engine", "ejs");
 
 //middleware & static files
 app.use(express.static("public"));
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //all the url encoded data that passes that into object
 app.use(morgan("dev"));
