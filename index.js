@@ -23,7 +23,6 @@ mongoose.connect(dbURI)
 
 //register view engine
 app.set("view engine", "ejs");
-app.set("views", path.resolve("./views"))
 
 
 //middleware & static files
